@@ -1,0 +1,217 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>Details</title>
+    <style>
+        #l1{
+            background-color:lightpink;font-style:italic;border:5px ridge;border-color:yellow;animation-name:ani;animation-duration:10s;position:relative;transition-property:none;justify-content:center;align-items:center;
+        }
+        #l2{
+            background-color:skyblue;font-family:Calibri;border:5px ridge;border-color:yellow;animation-name:ani1;animation-duration:10s;position:relative;
+        }
+        #e1{
+            background-color:whitesmoke;font-size:20px;font-style:oblique;font-variant:small-caps;
+        }
+        .e2{
+            background-color:whitesmoke;font-size:20px;font-style:oblique;
+        }
+        body{
+            background-color:gainsboro; transform:none;
+        }
+        
+        a{
+            border:25px ;color:black;text-decoration:none;font-size:20px;font-family:fantasy;
+        }
+        a:link{
+            background-color:Window;
+        }  
+        a:visited{
+            background-color:snow;
+        }  
+        a:active{
+            background-color:red;
+        } 
+        a:hover{
+            background-color:yellowgreen;
+        } 
+        p::first-letter
+        {
+            font-size:100px;
+        }
+        p::first-line
+        {
+            font-family:'High Tower Text';font-size:50px;
+        }
+        a{text-transform:uppercase;}
+        #s1{animation-name:s1;animation-duration:10s;position:relative;text-decoration:none}
+        #s2{animation-name:s2;animation-duration:10s;position:relative;text-decoration:none}
+        #s3 {
+            animation-name: s3;
+            animation-duration: 10s;
+            position: relative;
+            text-decoration: none;
+        }
+        #s4{animation-name:s4;animation-duration:10s;position:relative;text-decoration:none}
+        #s5{animation-name:s5;animation-duration:10s;position:relative;text-decoration:none}
+        @keyframes ani{
+            0%{background-color:lightpink;left:0px;top:0px}
+            50% {
+                background-color: coral;
+                left: 200px;
+                top: 0px;
+            }
+        }
+        @keyframes ani1{
+            0%{background-color:skyblue;left:0px;top:0px}
+            50%{background-color:yellowgreen;left:200px;top:0px}
+        }
+        @keyframes s1 {
+            0% {
+                color: blue;
+                left: 0px;
+                top: 0px;
+            }
+
+            50% {
+                color: red;
+                left: 200px;
+                top: 0px;
+            }
+        }
+        @keyframes s2 {
+            0% {
+                color: red;
+                left: 0px;
+                top: 0px;
+            }
+
+            50% {
+                color: blue;
+                left: 200px;
+                top: 0px;
+            }
+        }
+        @keyframes s3 {
+            0% {
+                color: goldenrod;
+                left: 0px;
+                top: 0px;
+            }
+
+            50% {
+                color: green;
+                left: 200px;
+                top: 0px;
+            }
+        }
+        @keyframes s4 {
+            0% {
+                color: green;
+                left: 0px;
+                top: 0px;
+            }
+
+            50% {
+                color: goldenrod;
+                left: 200px;
+                top: 0px;
+            }
+        }
+        @keyframes s5 {
+            0% {
+                color: purple;
+                left: 0px;
+                top: 0px;
+            }
+
+            50% {
+                color: palegreen;
+                left: 200px;
+                top: 0;
+            }
+        }
+        @keyframes p{
+            0%{color:black;left:0px;top:0px}
+            50%{color:deepskyblue;left:200px;top:0px}
+            
+            }
+        P{
+            animation-name:p;animation-duration:10s;position:relative;
+        }
+        #msg{
+            color:green;
+        }
+       </style>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,intial-scale=1.0" />
+   </head>
+<body>
+    <form  onsubmit=" return fun()" action="https://www.kodnest.com">
+        <center>
+            <span id="s1" style="font-size:30px;font-family:'Lucida Calligraphy';color:blue">L</span>
+            <span id="s2" style="font-size:30px; font-family:'Lucida Calligraphy';color:red">O</span>
+            <span id="s3" style="font-size: 30px; font-family: 'Lucida Calligraphy'; color: goldenrod">G</span>
+            <span id="s4" style="font-size: 30px; font-family: 'Lucida Calligraphy'; color: green">I</span>
+            <span id="s5" style="font-size: 30px; font-family: 'Lucida Calligraphy'; color: purple">N</span>
+        </center>
+        <fieldset id="l1">
+            <legend id="e1">Student details</legend>
+            <label id="name">FristName</label>
+            <input type="text" id="Fname" name="FName" pattern="[a-z A-z]
+               {1,20}" /><span id="msg">*</span><br /><br />
+            <label>MiddleName</label>
+            <input type="text" id="Mname" name="Mname" /><br /><br />
+            <label>LastName</label>
+            <input type="text" id="Lname" name="Lname" /><span id="msg">*</span><br /><br />
+            <label>Age</label>
+            <input type="number" required id="age" name="age" pattern="{0,100}" /><br /><br />
+            <label>Email</label>
+            <input type="email" required placeholder="Example@gmail.com" id="email" name="email" /><span id="msg">*</span><br /><br />
+            <label>Phone Number</label>
+            <input type="text" /><br /><br />
+             <label>DOB</label>
+            <input type="date" required placeholder="dob" id="dob" name="dob" /><span id="msg">*</span><br /><br />
+            <input type="submit" id="submit" name="s" />
+            <script src="detail.js"></script>
+        </fieldset>
+        <fieldset id="l2">
+            <legend class="e2">Education Details</legend>
+            <label><u>Department</u></label><br /><br />
+            <label>CS</label>
+            <input type="radio" id="Cs" name="CS" />
+            <label>ECE</label>
+            <input type="radio" id="ECE" name="ECE" />
+            <label>EEE</label>
+            <input type="radio" id="EEE" name="EEE" />
+            <label>Mechanical</label>
+            <input type="radio" id="Mc" name="Mc" /><br /><br />
+            <label>YOB</label>
+            <input list="YOB" id="year" name="year" />
+            <datalist id="YOB">
+                <option>2012</option>
+                <option>2017</option>
+                <option>2020</option>
+                <option>2022</option>
+                <option>2023</option>
+            </datalist><br /><br />
+            <label><u>Skills</u></label><br /><br />
+            <span id="msg">*</span>
+            <label>HTML</label>
+            <input type="checkbox" id="html" name="html" />
+            <label>CSS</label>
+            <input type="checkbox" id="css" name="css" />
+            <label>JAVA</label>
+            <input type="checkbox" id="java" name="java" />
+            <label>SAP</label>
+            <input type="checkbox" id="sap" name="sap" /><br /><br />
+            <input type="submit" id="s" name="s" width="500" height="900" />
+        </fieldset><br /><br />
+        <a href="https://www.youtube.com" target="_self">youtube</a>
+
+        <p>
+            Review Details
+            Once Again
+        </p>
+    </form>
+</body>
+</html>
